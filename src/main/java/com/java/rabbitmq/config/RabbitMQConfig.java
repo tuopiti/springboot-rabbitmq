@@ -78,6 +78,6 @@ public class RabbitMQConfig {
     public AmqpTemplate amqpTemplate(ConnectionFactory connectionFactory){
         RabbitTemplate rabbitTemplate = new RabbitTemplate((org.springframework.amqp.rabbit.connection.ConnectionFactory) connectionFactory);
         rabbitTemplate.setMessageConverter((org.springframework.amqp.support.converter.MessageConverter) converter());
-        return rabbitTemplate; // <-- missing this
+        return rabbitTemplate;
     }
 }
